@@ -1,0 +1,182 @@
+// Tablets & Smaller
+@media (max-width: 800px) {
+     #header-home {
+          height: 100vh;
+
+          .header-content {
+               padding-top: 20rem;
+          }
+     }
+}
+
+// Smartphones
+@media (max-width: 320px) {
+     #main-nav {
+          flex-direction: column;
+          align-items: center;
+
+          li {
+               padding: 1rem;
+               padding-bottom: 0;
+          }
+     }
+
+     #header {
+          &-home {
+               height: 100vh;
+               //  border-bottom: 3px solid $main-color;
+               // background-position: 20% 30%;
+
+               .header-content {
+                    #Hello {
+                         font-size: 1.3rem;
+                         padding-bottom: 1rem;
+                    }
+
+                    h1 {
+                         font-size: 38px;
+                    }
+                    .lead {
+                         position: absolute;
+                         top: 290px;
+                         right: 5px;
+                    }
+                    .btn-main {
+                         display: none;
+                    }
+                    .home-social {
+                         display: flex;
+                         justify-content: space-between;
+                         align-items: center;
+                         position: absolute;
+
+                         a {
+                              padding: 2rem;
+                         }
+
+                         li {
+                              position: relative;
+                              bottom: 140px;
+                              right: 20px;
+                         }
+
+                         li:hover span {
+                              display: none;
+                         }
+                         li:hover i {
+                              color: #fff;
+                              transform: scale(0.75);
+                         }
+                    }
+               }
+          }
+
+          &-inner {
+               height: 10rem;
+          }
+     }
+
+     // Stack Grid Columns
+     #about-b .specials,
+     #home-b .stats,
+     #home-c .process,
+     #about-d .testimonials,
+     #contact-b .contact-info,
+     .items {
+          grid-template-columns: 1fr;
+     }
+
+     // About
+     #about {
+          &-b {
+               .specials div {
+                    border-bottom: 1px $light-color solid;
+                    padding-bottom: 1rem;
+
+                    &:last-child {
+                         border: none;
+                         padding-bottom: 0;
+                    }
+               }
+          }
+
+          &-b {
+               .stats div {
+                    padding: 2rem 0 1rem 0;
+               }
+          }
+     }
+
+     // Contact
+     #contact {
+          &-a {
+               .text-fields {
+                    grid-template-areas:
+                         "name"
+                         "subject"
+                         "email"
+                         "phone"
+                         "message";
+               }
+          }
+
+          &-b {
+               div {
+                    margin-bottom: 1rem;
+                    padding-bottom: 1rem;
+                    border-bottom: 1px #555 solid;
+
+                    &:last-child {
+                         border: none;
+                         margin-bottom: 0;
+                         padding-bottom: 0;
+                    }
+               }
+          }
+
+          &-c {
+               h1 {
+                    font-size: 2rem;
+               }
+          }
+     }
+
+     // Footer
+     #main-footer {
+          height: 7rem;
+
+          .footer-content {
+               flex-direction: column;
+               padding: 2rem;
+               height: 7rem;
+
+               p {
+                    padding-bottom: 2rem;
+               }
+
+               .social a {
+                    width: 14px;
+                    height: 14px;
+               }
+          }
+     }
+}
+
+// Landscape
+@media (max-height: 580px) {
+     #header-home {
+          .header-content {
+               padding-top: 3rem;
+          }
+     }
+}
+
+@media (max-height: 330px) {
+     #header-home {
+          .header-content {
+               h1 {
+                    font-size: 2rem;
+               }
+          }
+     }
+}

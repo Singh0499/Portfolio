@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Singh0499/Portfolio.git"
+  },
+  "author": "Gurpreet Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Singh0499/Portfolio/issues"
+  },
+  "homepage": "https://github.com/Singh0499/Portfolio#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

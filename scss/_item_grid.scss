@@ -1,0 +1,20 @@
+.items {
+     display: grid;
+     grid-gap: 5rem 2rem;
+     grid-template-columns: repeat(3, 1fr);
+     padding-bottom: 2rem;
+
+     img {
+          width: 100%;
+          height: 250px;
+          padding: 2rem;
+          // border: 3px #000 solid;
+
+          &:hover {
+               opacity: 0.5;
+               border: none;
+               transform: scale(1.05);
+               transition: all 0.5s ease-out;
+          }
+     }
+}
