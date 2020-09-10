@@ -10,6 +10,144 @@
 }
 
 // Smartphones
+@media (max-width: 375px) and (min-width: 321px) {
+     #main-nav {
+          flex-direction: column;
+          align-items: center;
+
+          li {
+               padding: 1rem;
+               padding-bottom: 0;
+          }
+     }
+
+     #header {
+          &-home {
+               height: 100vh;
+
+               .header-content {
+                    margin-top: -14rem;
+                    #Hello {
+                         font-size: 1.3rem;
+                         padding-bottom: 1rem;
+                    }
+
+                    h1 {
+                         font-size: 43px;
+                    }
+                    .lead {
+                         position: absolute;
+                         top: 330px;
+                         right: 5px;
+                    }
+                    .btn-main {
+                         display: none;
+                    }
+                    .home-social {
+                         display: flex;
+                         justify-content: space-between;
+                         align-items: center;
+                         position: absolute;
+
+                         a {
+                              padding: 2rem;
+                         }
+
+                         li {
+                              position: relative;
+                              bottom: 170px;
+                              right: 40px;
+                         }
+
+                         li:hover span {
+                              display: none;
+                         }
+                         li:hover i {
+                              color: #fff;
+                              transform: scale(0.75);
+                         }
+                    }
+               }
+          }
+
+          &-inner {
+               height: 10rem;
+          }
+     }
+
+     // Stack Grid Columns
+     #about-b .specials,
+     #work-b .stats,
+     .items {
+          grid-template-columns: 1fr;
+     }
+
+     // About
+     #about {
+          &-b {
+               .specials div {
+                    border-bottom: 1px $light-color solid;
+                    padding-bottom: 1rem;
+
+                    &:last-child {
+                         border: none;
+                         padding-bottom: 0;
+                    }
+               }
+          }
+     }
+
+     #work {
+          &-b {
+               .stats {
+                    div {
+                         &:nth-child(even) {
+                              color: $dark-color;
+                              background: $light-color;
+                         }
+                         &:nth-child(odd) {
+                              color: $light-color;
+                              background: $dark-color;
+                         }
+                    }
+               }
+          }
+     }
+     // Contact
+     #contact {
+          &-a {
+               .text-fields {
+                    grid-template-areas:
+                         "name"
+                         "subject"
+                         "email"
+                         "phone"
+                         "message";
+               }
+          }
+     }
+
+     // Footer
+     #main-footer {
+          height: 7rem;
+
+          .footer-content {
+               flex-direction: column;
+               padding: 2rem;
+               height: 7rem;
+
+               p {
+                    padding-bottom: 2rem;
+               }
+
+               .social a {
+                    width: 14px;
+                    height: 14px;
+               }
+          }
+     }
+}
+
 @media (max-width: 320px) {
      #main-nav {
           flex-direction: column;
@@ -24,8 +162,6 @@
      #header {
           &-home {
                height: 100vh;
-               //  border-bottom: 3px solid $main-color;
-               // background-position: 20% 30%;
 
                .header-content {
                     #Hello {
@@ -78,10 +214,7 @@
 
      // Stack Grid Columns
      #about-b .specials,
-     #home-b .stats,
-     #home-c .process,
-     #about-d .testimonials,
-     #contact-b .contact-info,
+     #work-b .stats,
      .items {
           grid-template-columns: 1fr;
      }
@@ -99,14 +232,24 @@
                     }
                }
           }
+     }
 
+     #work {
           &-b {
-               .stats div {
-                    padding: 2rem 0 1rem 0;
+               .stats {
+                    div {
+                         &:nth-child(even) {
+                              color: $dark-color;
+                              background: $light-color;
+                         }
+                         &:nth-child(odd) {
+                              color: $light-color;
+                              background: $dark-color;
+                         }
+                    }
                }
           }
      }
-
      // Contact
      #contact {
           &-a {
@@ -117,26 +260,6 @@
                          "email"
                          "phone"
                          "message";
-               }
-          }
-
-          &-b {
-               div {
-                    margin-bottom: 1rem;
-                    padding-bottom: 1rem;
-                    border-bottom: 1px #555 solid;
-
-                    &:last-child {
-                         border: none;
-                         margin-bottom: 0;
-                         padding-bottom: 0;
-                    }
-               }
-          }
-
-          &-c {
-               h1 {
-                    font-size: 2rem;
                }
           }
      }
